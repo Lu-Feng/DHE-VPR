@@ -5,4 +5,4 @@ The code will be released soon.
 
 **Our another two-stage VPR work SelaVPR achieved SOTA performance on several datasets. The code has been released [HERE](https://github.com/Lu-Feng/SelaVPR).**
 
-![pipeline](image/pipeline.png)
+<img src="image/pipeline.png" width="700px">
