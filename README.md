@@ -74,8 +74,11 @@ python eval.py  --resume_fe /path/to/your/finetunedCCT14_msls.torch --resume_hr 
 ## Acknowledgements
 
 Parts of this repo are inspired by the following repositories:
+
 [Visual Geo-localization Benchmark](https://github.com/gmberton/deep-visual-geo-localization-benchmark)
+
 [GeoWarp](https://github.com/gmberton/geo_warp)
+
 [TransVPR](https://github.com/RuotongWANG/TransVPR-model-implementation)
 
 ## Citation
