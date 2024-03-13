@@ -26,7 +26,7 @@ def to_cuda(list_):
     return [item.cuda() for item in list_]
 
 if __name__ == "__main__":
-    os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     # Training DHE network parameters
     parser.add_argument("--lr", type=float, default=0.0001,
