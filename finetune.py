@@ -170,7 +170,7 @@ for epoch_num in range(start_epoch_num, args.epochs_num):
 
 
     ############### TEST ###############
-    geoloc_test_dataset  = dataset_geoloc.GeolocDataset(args.datasets_folder, args.dataset_name, split="test",
+    geoloc_test_dataset  = dataset_geoloc.GeolocDataset(args.datasets_folder, args.dataset_name, split="val",
                                                     positive_dist_threshold=args.val_positive_dist_threshold)
     logging.info(f"Geoloc test set: {geoloc_test_dataset}")
     logging.info(f"now it's test time")
