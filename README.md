@@ -27,18 +27,18 @@ The dataset should be organized in a directory tree as such:
                     └── queries
 ```
 
-Download the trained CCT-14 backbone:
+You can directly download the trained CCT-14 backbone:
 
-[CCT14_trained_on_msls](https://drive.google.com/file/d/1kXGixMjU_imBu0Yq5cZVovBUx3MGyoZ8/view?usp=sharing)
+trained on MSLS: [CCT14_msls](https://drive.google.com/file/d/1kXGixMjU_imBu0Yq5cZVovBUx3MGyoZ8/view?usp=sharing)
 
-[CCT14_trained_on_pitts30k](https://drive.google.com/file/d/1CBrM9GwJeVgiGfNZVgBVLRoh3Jw5ZoWB/view?usp=sharing)
+trained on Pitts30k: [CCT14_pitts30k](https://drive.google.com/file/d/1CBrM9GwJeVgiGfNZVgBVLRoh3Jw5ZoWB/view?usp=sharing)
 
 ## Train (initialize) the DHE network
 
 After getting the CCT14 backbone  trained on MSLS (CCT14_msls.pth), you can train (i.e. initialize) the DHE network on MSLS:
 
 ```
-python train_dhe.py --resume_fe /path/to/your/CCT14_msls.pth --datasets_folder /path/to/your/datasets/folder --dataset_name msls
+python train_dhe.py --resume_fe=/path/to/your/CCT14_msls.pth --datasets_folder=/path/to/your/datasets_vg/datasets --dataset_name=msls
 ```
 
 You can directly download the initialized DHE network [HERE](https://drive.google.com/file/d/19TlUo7pkXweLIW0kzbaf7YVNofx50xQW/view?usp=sharing).
@@ -48,13 +48,13 @@ You can directly download the initialized DHE network [HERE](https://drive.googl
 To jointly finetune the backbone and the DHE network on the MSLS dataset, please run:
 
 ```
-python3 finetune.py --datasets_folder=/path/to/your/datasets/folder --dataset_name=msls --epochs_num=2 --resume_fe /path/to/your/CCT14_msls.pth --resume_hr /path/to/your/initializedDHE.torch --queries_per_epoch=10000
+python3 finetune.py --datasets_folder=/path/to/your/datasets_vg/datasets --dataset_name=msls --epochs_num=2 --resume_fe=/path/to/your/CCT14_msls.pth --resume_hr=/path/to/your/initializedDHE.torch --queries_per_epoch=10000
 ```
 
 Finetune on the Pitts30k dataset, please run:
 
 ```
-python3 finetune.py --datasets_folder=/path/to/your/datasets/folder --dataset_name=pitts30k --epochs_num=40 --resume_fe /path/to/your/CCT14_pitts30k.pth --resume_hr /path/to/your/initializedDHE.torch
+python3 finetune.py --datasets_folder=/path/to/your/datasets_vg/datasets --dataset_name=pitts30k --epochs_num=40 --resume_fe=/path/to/your/CCT14_pitts30k.pth --resume_hr=/path/to/your/initializedDHE.torch
 ```
 
 You can directly download the finetuned CCT14 backbone and DHE network:
@@ -68,7 +68,7 @@ Pitts30k:  [finetunedCCT14](https://drive.google.com/file/d/1GpjiNHn8ceMK8J3AyEh
 To evaluate the finetuned complete DHE-VPR model on MSLS (or Pitts30k), run:
 
 ```
-python eval.py  --resume_fe /path/to/your/finetunedCCT14_msls.torch --resume_hr /path/to/your/finetunedDHE_msls.torch --datasets_folder /home/lufeng/data/VPR/datasets_vg/datasets --dataset_name msls
+python eval.py  --resume_fe=/path/to/your/finetunedCCT14_msls.torch --resume_hr=/path/to/your/finetunedDHE_msls.torch --datasets_folder=/path/to/your/datasets_vg/datasets --dataset_name=msls
 ```
 
 ## Acknowledgements
