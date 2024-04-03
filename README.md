@@ -1,5 +1,6 @@
 # DHE-VPR
-This is the official repository for the AAAI 2024 paper "[Deep Homography Estimation for Visual Place Recognition](https://arxiv.org/pdf/2402.16086.pdf)".
+This is the official repository for the AAAI 2024 paper "Deep Homography Estimation for Visual Place Recognition".
+[[AAAI proceedings](https://ojs.aaai.org/index.php/AAAI/article/view/28901)] [[arXiv](https://arxiv.org/pdf/2402.16086.pdf)] The arXiv version is more complete.
 
 <img src="image/pipeline.png" width="600px">
 
@@ -90,6 +91,9 @@ If you find this repo useful for your research, please consider citing the paper
   title={Deep Homography Estimation for Visual Place Recognition},
   author={Lu, Feng and Dong, Shuting and Zhang, Lijun and Liu, Bingxi and Lan, Xiangyuan and Jiang, Dongmei and Yuan, Chun},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2024}
+  year={2024},
+  volume={38}, 
+  number={9}, 
+  pages={10341-10349}
 }
 ```
